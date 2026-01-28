@@ -18,7 +18,7 @@ export default function Home() {
               className="w-8 h-8"
             />
             <div className="text-xl font-bold tracking-tighter uppercase">
-              <span className="text-red-500">Muscle</span> WOD
+                 <span style={{ color: '#fff', fontFamily: 'Helvetica Neue, Helvetica, Arial, sans-serif', fontWeight: 900 }}>Muscle WOD</span>
             </div>
           </div>
           <div className="flex items-center gap-6">
