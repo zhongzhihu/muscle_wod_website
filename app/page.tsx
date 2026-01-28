@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import squareIcon from "./_assets/square-icon_transparent.png";
+import appStoreBadge from "./_assets/appstore_badge_en.svg";
 
 export default function Home() {
   return (
@@ -9,7 +11,7 @@ export default function Home() {
         <div className="container mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <Image 
-              src="/square-icon_transparent.png" 
+              src={squareIcon} 
               alt="Muscle WOD Logo" 
               width={32} 
               height={32} 
@@ -57,7 +59,7 @@ export default function Home() {
             >
               <div className="w-[190px] h-[60px] relative">
                   <Image 
-                    src="/appstore_badge_en.svg" 
+                    src={appStoreBadge} 
                     alt="Download on the App Store" 
                     fill
                     className="object-contain"
