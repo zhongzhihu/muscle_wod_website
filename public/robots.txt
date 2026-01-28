@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://musclewod.com
+
+# Sitemaps
+Sitemap: https://musclewod.com/sitemap.xml
