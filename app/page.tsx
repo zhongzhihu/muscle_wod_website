@@ -7,15 +7,29 @@ export default function Home() {
       {/* Navigation */}
       <nav className="fixed w-full z-50 bg-gray-950/80 backdrop-blur-md border-b border-gray-800">
         <div className="container mx-auto px-6 h-16 flex items-center justify-between">
-          <div className="text-xl font-bold tracking-tighter uppercase">
-            <span className="text-red-500">Muscle</span> WOD
+          <div className="flex items-center gap-3">
+            <Image 
+              src="/square-icon_transparent.png" 
+              alt="Muscle WOD Logo" 
+              width={32} 
+              height={32} 
+              className="w-8 h-8"
+            />
+            <div className="text-xl font-bold tracking-tighter uppercase">
+              <span className="text-red-500">Muscle</span> WOD
+            </div>
           </div>
-          <Link 
-            href="https://apps.apple.com/us/app/muscle-wod-workout-generator/id6753089071"
-            className="bg-white text-black px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-200 transition-colors"
-          >
-            Download App
-          </Link>
+          <div className="flex items-center gap-6">
+            <Link href="/contact" className="text-sm font-semibold text-gray-300 hover:text-white transition-colors">
+              Contact Us
+            </Link>
+            <Link 
+              href="https://apps.apple.com/us/app/muscle-wod-workout-generator/id6753089071"
+              className="bg-white text-black px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-200 transition-colors"
+            >
+              Download App
+            </Link>
+          </div>
         </div>
       </nav>
 
@@ -135,9 +149,6 @@ export default function Home() {
       <footer className="border-t border-gray-800 py-12 bg-gray-950 text-center">
         <div className="container mx-auto px-6">
           <div className="flex justify-center gap-6 mb-8 text-sm font-medium">
-             <Link href="/contact" className="text-gray-400 hover:text-white transition-colors">
-               Contact Us
-             </Link>
              <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
                Privacy Policy
              </Link>
