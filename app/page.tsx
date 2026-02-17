@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import squareIcon from "./_assets/square-icon_transparent.png";
 import appStoreBadge from "./_assets/appstore_badge_en.svg";
+import playStoreBadge from "./_assets/playstore_badge.png";
 
 export default function Home() {
   return (
@@ -25,12 +26,6 @@ export default function Home() {
             <Link href="/contact" className="text-sm font-semibold text-gray-300 hover:text-white transition-colors">
               Contact Us
             </Link>
-            <Link 
-              href="https://apps.apple.com/us/app/muscle-wod-workout-generator/id6753089071"
-              className="bg-white text-black px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-200 transition-colors"
-            >
-              Download App
-            </Link>
           </div>
         </div>
       </nav>
@@ -38,9 +33,6 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
         <div className="container mx-auto px-6 relative z-10 text-center">
-          <div className="inline-block mb-4 px-3 py-1 rounded-full bg-gray-800 border border-gray-700 text-gray-300 text-sm font-medium">
-            Available now on iOS
-          </div>
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-4 text-white">
             Train Like a <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-600">Pro</span>
           </h1>
@@ -67,17 +59,19 @@ export default function Home() {
               </div>
             </Link>
             
-            <div className="relative group">
-              <div className="absolute -top-3 -right-2 bg-gray-700 border border-gray-600 text-gray-300 text-[10px] font-bold px-2 py-0.5 rounded-full z-10 tracking-wide uppercase">
-                Coming Soon
+            <Link
+              href="https://play.google.com/store/apps/details?id=com.linguistic.wodbuilder"
+              className="group hover:scale-105 transition-transform duration-200"
+            >
+              <div className="w-[140px] h-[45px] sm:w-[190px] sm:h-[60px] relative">
+                <Image
+                  src={playStoreBadge}
+                  alt="Get it on Google Play"
+                  fill
+                  className="object-contain"
+                />
               </div>
-              <button disabled className="flex items-center justify-center gap-2 sm:gap-3 bg-gray-800/50 text-gray-400 w-[140px] h-[45px] sm:w-[190px] sm:h-[60px] rounded-xl font-bold text-sm sm:text-lg border border-gray-700/50 cursor-not-allowed">
-                <svg className="w-5 h-5 sm:w-6 sm:h-6 opacity-50" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.5,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
-                </svg>
-                <span>Google Play</span>
-              </button>
-            </div>
+            </Link>
 
             <div className="relative group">
               <div className="absolute -top-3 -right-2 bg-gray-700 border border-gray-600 text-gray-300 text-[10px] font-bold px-2 py-0.5 rounded-full z-10 tracking-wide uppercase">
