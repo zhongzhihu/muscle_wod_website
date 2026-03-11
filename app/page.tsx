@@ -10,7 +10,7 @@ import progress from "./_assets/Track Progress & PR.png";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-950 text-gray-100 font-sans selection:bg-red-500 selection:text-white">
+    <div className="min-h-screen bg-gray-950 text-gray-100 font-sans selection:bg-gray-700 selection:text-white">
       {/* Navigation */}
       <nav className="fixed w-full z-50 bg-gray-950/80 backdrop-blur-md border-b border-gray-800">
         <div className="container mx-auto px-6 h-16 flex items-center justify-between">
@@ -38,14 +38,10 @@ export default function Home() {
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
         <div className="container mx-auto px-6 relative z-10 text-center">
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-4 text-white">
-            Train Like a <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-600">Pro</span>
+            Train Like a <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-gray-500">Pro</span>
           </h1>
           <p className="text-2xl md:text-3xl font-semibold text-gray-200 mb-8 tracking-tight">
             At home or in the gym
-          </p>
-          <p className="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Generate the perfect WOD for muscle building, fat loss, and conditioning. 
-            Access 3000+ authentic workouts with video demos, timers, and progress tracking.
           </p>
           
           <div className="flex flex-wrap items-center justify-center gap-4">
@@ -69,7 +65,7 @@ export default function Home() {
             >
               <div className="w-[140px] h-[45px] sm:w-[190px] sm:h-[60px] relative">
                 {/* New Tag */}
-                <div className="absolute -top-3 -right-2 bg-red-600 border border-red-400 text-white text-[10px] font-bold px-2 py-0.5 rounded-full z-10 tracking-wide uppercase shadow-lg">
+                <div className="absolute -top-3 -right-2 bg-gray-700 border border-gray-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full z-10 tracking-wide uppercase shadow-lg">
                   New
                 </div>
                 <Image
@@ -99,8 +95,8 @@ export default function Home() {
         
         {/* Background gradient */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-4xl opacity-20 pointer-events-none">
-           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-red-600 rounded-full blur-[128px]"></div>
-           <div className="absolute top-1/2 right-1/4 w-64 h-64 bg-orange-500 rounded-full blur-[128px]"></div>
+           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gray-600 rounded-full blur-[128px]"></div>
+           <div className="absolute top-1/2 right-1/4 w-64 h-64 bg-gray-500 rounded-full blur-[128px]"></div>
         </div>
       </section>
 
