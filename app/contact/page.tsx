@@ -1,44 +1,52 @@
+import Image from "next/image";
 import Link from "next/link";
+import squareIcon from "../_assets/square-icon_transparent.png";
 
 export default function Contact() {
   return (
-    <div className="min-h-screen bg-gray-950 text-gray-100 font-sans selection:bg-red-500 selection:text-white">
+    <div className="min-h-screen bg-gray-950 text-gray-100 font-sans selection:bg-gray-700 selection:text-white">
       {/* Navigation */}
       <nav className="fixed w-full z-50 bg-gray-950/80 backdrop-blur-md border-b border-gray-800">
         <div className="container mx-auto px-6 h-16 flex items-center justify-between">
-          <Link href="/" className="text-xl font-bold tracking-tighter uppercase">
-            <span className="text-red-500">Muscle</span> WOD
+          <Link href="/" className="flex items-center gap-3">
+            <Image 
+              src={squareIcon} 
+              alt="Muscle WOD Logo" 
+              width={32} 
+              height={32} 
+              className="w-8 h-8"
+            />
+            <div className="text-xl font-bold tracking-tighter uppercase">
+                 <span style={{ color: '#fff', fontFamily: 'Helvetica Neue, Helvetica, Arial, sans-serif', fontWeight: 900 }}>Muscle WOD</span>
+            </div>
           </Link>
-          <Link 
-            href="https://apps.apple.com/us/app/muscle-wod-workout-generator/id6753089071"
-            className="bg-white text-black px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-200 transition-colors"
-          >
-            Download App
-          </Link>
+          <div className="flex items-center gap-6">
+            <Link href="/" className="text-sm font-semibold text-gray-300 hover:text-white transition-colors">
+              Home
+            </Link>
+          </div>
         </div>
       </nav>
 
-      {/* Content */}
-      <section className="pt-32 pb-20 px-6">
-        <div className="container mx-auto max-w-2xl text-center">
-          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-8 text-white">
-            Contact Us
-          </h1>
-          <p className="text-xl text-gray-400 mb-12 leading-relaxed">
-            We'd love to hear from you. Whether you have a question about features, feedback on the app, or need to report a bug, we're here to help.
-          </p>
+      {/* Contact Section */}
+      <section className="pt-40 pb-24 px-6">
+        <div className="container mx-auto max-w-4xl">
+          <div className="mb-12 text-center">
+            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4 text-white">
+              Contact Us
+            </h1>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Have questions or feedback? We'd love to hear from you.
+            </p>
+          </div>
 
-          <div className="bg-gray-800/50 border border-gray-700 rounded-2xl p-8 md:p-12">
-            <svg className="w-12 h-12 text-red-500 mx-auto mb-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-            <h2 className="text-2xl font-bold mb-4 text-white">Get in Touch</h2>
-            <p className="text-gray-400 mb-6">
-              Send us an email directly and we'll get back to you as soon as possible.
+          <div className="bg-gray-900/50 border border-gray-800 rounded-2xl p-8 md:p-12 text-center">
+            <p className="text-lg text-gray-300 mb-6">
+              You can reach us via email at:
             </p>
             <a 
               href="mailto:linguico.app@gmail.com" 
-              className="inline-block bg-red-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-red-700 transition-colors"
+              className="text-2xl md:text-3xl font-bold text-white hover:text-gray-300 transition-colors"
             >
               linguico.app@gmail.com
             </a>
@@ -47,9 +55,17 @@ export default function Contact() {
       </section>
 
       {/* Footer */}
-      <footer className="fixed bottom-0 w-full border-t border-gray-800 py-8 bg-gray-950 text-center">
+      <footer className="border-t border-gray-800 py-12 bg-gray-950 text-center">
         <div className="container mx-auto px-6">
-          <p className="text-gray-500">&copy; {new Date().getFullYear()} Muscle WOD. All rights reserved.</p>
+          <div className="flex justify-center gap-6 mb-8 text-sm font-medium">
+             <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
+               Privacy Policy
+             </Link>
+          </div>
+          <p className="text-gray-500 mb-4">&copy; {new Date().getFullYear()} Muscle WOD. All rights reserved.</p>
+          <p className="text-gray-600 text-sm">
+            Not affiliated with CrossFit, Inc.
+          </p>
         </div>
       </footer>
     </div>
