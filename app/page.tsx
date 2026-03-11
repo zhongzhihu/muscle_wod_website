@@ -64,6 +64,10 @@ export default function Home() {
               className="group hover:scale-105 transition-transform duration-200"
             >
               <div className="w-[140px] h-[45px] sm:w-[190px] sm:h-[60px] relative">
+                {/* New Tag */}
+                <div className="absolute -top-3 -right-2 bg-red-600 border border-red-400 text-white text-[10px] font-bold px-2 py-0.5 rounded-full z-10 tracking-wide uppercase shadow-lg">
+                  New
+                </div>
                 <Image
                   src={playStoreBadge}
                   alt="Get it on Google Play"
