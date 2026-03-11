@@ -3,6 +3,10 @@ import Link from "next/link";
 import squareIcon from "./_assets/square-icon_transparent.png";
 import appStoreBadge from "./_assets/appstore_badge_en.svg";
 import playStoreBadge from "./_assets/playstore_badge.png";
+import wodsDemo from "./_assets/3000 WODs with demonstration videos.png";
+import timer from "./_assets/Built-in WOD workout timer.png";
+import filters from "./_assets/Filter WODs by Equipment.png";
+import progress from "./_assets/Track Progress & PR.png";
 
 export default function Home() {
   return (
@@ -41,7 +45,7 @@ export default function Home() {
           </p>
           <p className="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
             Generate the perfect WOD for muscle building, fat loss, and conditioning. 
-            Access 1000+ authentic workouts with video demos, timers, and progress tracking.
+            Access 3000+ authentic workouts with video demos, timers, and progress tracking.
           </p>
           
           <div className="flex flex-wrap items-center justify-center gap-4">
@@ -106,13 +110,44 @@ export default function Home() {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Everything You Need to Crush It</h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Whether you have a full gym or just bodyweight, Muscle WOD adapts to your equipment and goals.
+              Whether you have access to a full gym or no equipment at all, Muscle WOD generates the most effective workouts for your goals. 
             </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-16">
+            <div className="relative">
+              <Image
+                src={wodsDemo}
+                alt="3000 WODs with demonstration videos"
+                className="rounded-2xl border border-gray-800 shadow-2xl w-full h-auto"
+              />
+            </div>
+            <div className="relative">
+              <Image
+                src={timer}
+                alt="Built-in WOD workout timer"
+                className="rounded-2xl border border-gray-800 shadow-2xl w-full h-auto"
+              />
+            </div>
+            <div className="relative">
+              <Image
+                src={filters}
+                alt="Filter WODs by Equipment"
+                className="rounded-2xl border border-gray-800 shadow-2xl w-full h-auto"
+              />
+            </div>
+            <div className="relative">
+              <Image
+                src={progress}
+                alt="Track Progress & PR"
+                className="rounded-2xl border border-gray-800 shadow-2xl w-full h-auto"
+              />
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <FeatureCard 
-              title="1000+ Real WODs"
+              title="3000+ Real WODs"
               description="Access a massive library of real WODs sourced from CrossFit.com. Never get bored with your routine again."
               icon={<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />}
             />
