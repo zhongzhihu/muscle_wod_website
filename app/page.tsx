@@ -34,80 +34,61 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
-        <div className="container mx-auto px-6 relative z-10 text-center">
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-4 text-white">
-            Train Like a <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-gray-500">Pro</span>
-          </h1>
-          <p className="text-2xl md:text-3xl font-semibold text-gray-200 mb-8 tracking-tight">
-            At home or in the gym
-          </p>
-          
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            <Link 
-              href="https://apps.apple.com/us/app/muscle-wod-workout-generator/id6753089071"
-              className="group hover:scale-105 transition-transform duration-200"
-            >
-              <div className="w-[140px] h-[45px] sm:w-[190px] sm:h-[60px] relative">
-                  <Image 
-                    src={appStoreBadge} 
-                    alt="Download on the App Store" 
+      {/* Features Grid */}
+      <section className="pt-40 pb-24 bg-gray-900/50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-24">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Get Stronger, Faster and Healthier!</h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Whether you have access to a full gym or no equipment at all, Muscle WOD generates the most effective workouts to build muscle and burn fat efficiently. 
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-4 mt-8">
+              <Link 
+                href="https://apps.apple.com/us/app/muscle-wod-workout-generator/id6753089071"
+                className="group hover:scale-105 transition-transform duration-200"
+              >
+                <div className="w-[140px] h-[45px] sm:w-[190px] sm:h-[60px] relative">
+                    <Image 
+                      src={appStoreBadge} 
+                      alt="Download on the App Store" 
+                      fill
+                      className="object-contain"
+                    />
+                </div>
+              </Link>
+              
+              <Link
+                href="https://play.google.com/store/apps/details?id=com.linguistic.wodbuilder"
+                className="group hover:scale-105 transition-transform duration-200"
+              >
+                <div className="w-[140px] h-[45px] sm:w-[190px] sm:h-[60px] relative">
+                  {/* New Tag */}
+                  <div className="absolute -top-3 -right-2 bg-gray-700 border border-gray-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full z-10 tracking-wide uppercase shadow-lg">
+                    New
+                  </div>
+                  <Image
+                    src={playStoreBadge}
+                    alt="Get it on Google Play"
                     fill
                     className="object-contain"
                   />
-              </div>
-            </Link>
-            
-            <Link
-              href="https://play.google.com/store/apps/details?id=com.linguistic.wodbuilder"
-              className="group hover:scale-105 transition-transform duration-200"
-            >
-              <div className="w-[140px] h-[45px] sm:w-[190px] sm:h-[60px] relative">
-                {/* New Tag */}
-                <div className="absolute -top-3 -right-2 bg-gray-700 border border-gray-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full z-10 tracking-wide uppercase shadow-lg">
-                  New
                 </div>
-                <Image
-                  src={playStoreBadge}
-                  alt="Get it on Google Play"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-            </Link>
+              </Link>
 
-            <div className="relative group">
-              <div className="absolute -top-3 -right-2 bg-gray-700 border border-gray-600 text-gray-300 text-[10px] font-bold px-2 py-0.5 rounded-full z-10 tracking-wide uppercase">
-                Coming Soon
+              <div className="relative group">
+                <div className="absolute -top-3 -right-2 bg-gray-700 border border-gray-600 text-gray-300 text-[10px] font-bold px-2 py-0.5 rounded-full z-10 tracking-wide uppercase">
+                  Coming Soon
+                </div>
+                <button disabled className="flex items-center justify-center gap-2 sm:gap-3 bg-gray-800/50 text-gray-400 w-[140px] h-[45px] sm:w-[190px] sm:h-[60px] rounded-xl font-bold text-sm sm:text-lg border border-gray-700/50 cursor-not-allowed">
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6 opacity-50" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"></path>
+                  </svg>
+                  <span>Web App</span>
+                </button>
               </div>
-              <button disabled className="flex items-center justify-center gap-2 sm:gap-3 bg-gray-800/50 text-gray-400 w-[140px] h-[45px] sm:w-[190px] sm:h-[60px] rounded-xl font-bold text-sm sm:text-lg border border-gray-700/50 cursor-not-allowed">
-                <svg className="w-5 h-5 sm:w-6 sm:h-6 opacity-50" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <line x1="2" y1="12" x2="22" y2="12"></line>
-                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"></path>
-                </svg>
-                <span>Web App</span>
-              </button>
             </div>
-          </div>
-        </div>
-        
-        {/* Background gradient */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-4xl opacity-20 pointer-events-none">
-           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gray-600 rounded-full blur-[128px]"></div>
-           <div className="absolute top-1/2 right-1/4 w-64 h-64 bg-gray-500 rounded-full blur-[128px]"></div>
-        </div>
-      </section>
-
-      {/* Features Grid */}
-      <section className="py-24 bg-gray-900/50">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Everything You Need to Crush It</h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
-              Whether you have access to a full gym or no equipment at all, Muscle WOD generates the most effective workouts for your goals. 
-            </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-16">
